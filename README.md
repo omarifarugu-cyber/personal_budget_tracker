@@ -1,80 +1,70 @@
-# Personal Budget Tracker
+# SpendWise Dashboard
 
 ## Project Description
 
-The Personal Budget Tracker is a simple web application that allows users to record and view their expenses.
+SpendWise is a responsive expense-tracking dashboard built using HTML and CSS. The project focuses on creating a clean dashboard layout using CSS Grid, Flexbox, CSS custom properties, responsive design, and simple card micro-interactions.
 
-For Week 3, I improved the visual design of the existing Budget Tracker using CSS. I focused on color, typography, table styling, form styling, and the CSS Box Model without adding new functionality.
+## Features
 
-## Color Palette
+* Responsive dashboard layout
+* Sidebar navigation menu
+* Dashboard header
+* Summary section showing budget information
+* Six spending category cards
+* CSS Grid for the main page and category cards
+* Flexbox for navigation, header, summary cards, and dashboard cards
+* CSS custom properties for the color theme
+* Hover and keyboard focus effects
+* Responsive layout for screens below 768px
+* Dark theme using `prefers-color-scheme`
 
-I used a consistent blue and light-gray color palette throughout the application.
+## Spending Categories
 
-* Dark blue for headings and table headers
-* Blue for buttons
-* Light blue for alternating table rows
-* Light gray for the page background
-* White for the main content sections
+The dashboard contains six categories:
 
-This creates a clean and professional appearance.
-
-## Typography
-
-Google Fonts were used to improve the readability and visual hierarchy of the application.
-
-* **Poppins** is used for headings and table headings.
-* **Open Sans** is used for body text, labels, form elements, and buttons.
-
-## Expense Table Styling
-
-The expense table was improved with:
-
-* A styled table header
-* Proper cell padding
-* Borders
-* Alternating row colors
-* Hover effects
-* Rounded corners
-* Consistent typography
-
-## Add Expense Form
-
-The Add Expense form was improved with:
-
-* Proper spacing
-* Styled input fields
-* Borders
-* Rounded corners
-* Consistent fonts
-* A blue submit button
-* Focus styling for form fields
-
-## CSS Box Model
-
-The CSS Box Model was intentionally used throughout the project.
-
-* **Margin** separates different sections.
-* **Padding** creates space inside sections and form elements.
-* **Borders** define the different areas of the application.
-* **Border-radius** creates a modern and softer appearance.
-
-The page heading, Add Expense form, and Expense Table are visually separated into distinct sections.
+1. Food
+2. Transport
+3. Rent
+4. Entertainment
+5. Savings
+6. Utilities
 
 ## Technologies Used
 
 * HTML5
 * CSS3
-* Google Fonts
+* CSS Grid
+* Flexbox
+* CSS Custom Properties
+* CSS Media Queries
 
-## Project Structure
+## Layout
 
-```text
-Personal_Budget_Tracker/
-│
-├── index.html
-├── style.css
-└── README.md
-```
+CSS Grid is used for the main dashboard structure and category card layout.
+
+Flexbox is used inside the sidebar, header, summary section, and individual cards to arrange their contents.
+
+## Responsive Design
+
+The dashboard changes to a single-column layout on screens smaller than 768px. The layout can be tested using the browser's DevTools Device Toolbar.
+
+## Micro-interactions
+
+The category cards have hover and keyboard focus effects. The cards move slightly upward and display a subtle shadow. The transition duration is 200ms.
+
+## Dark Theme
+
+A dark theme is included using:
+
+`@media (prefers-color-scheme: dark)`
+
+The dark theme changes the CSS custom properties without changing the main layout styles.
+
+## Project Files
+
+* `index.html` — Contains the dashboard structure and static content.
+* `style.css` — Contains the layout, responsive design, theme variables, and card interactions.
+* `README.md` — Explains the project and its implementation.
 
 ## Author
 

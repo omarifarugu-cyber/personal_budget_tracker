@@ -1,155 +1,127 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Budget Tracker</title>
+    <title>SpendWise Dashboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <header>
-        <img
-            src="https://cdn-icons-png.flaticon.com/512/3135/3135706.png"
-            alt="Budget Tracker Logo"
-            width="80"
-        >
+    <div class="dashboard">
 
-        <h1>Personal Budget Tracker</h1>
-        <p>Track your expenses and manage your money wisely.</p>
-    </header>
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h1>SpendWise</h1>
 
-    <main>
+            <nav class="navigation">
+                <a href="#" class="active">Dashboard</a>
+                <a href="#">Transactions</a>
+                <a href="#">Budget</a>
+                <a href="#">Reports</a>
+                <a href="#">Settings</a>
+            </nav>
+        </aside>
 
-        <!-- Add Expense Section -->
-        <section class="add-expense-section">
-            <h2>Add Expense</h2>
+        <!-- Main Content -->
+        <main class="main-content">
 
-            <form>
-                <label for="expense-name">Expense Name:</label>
-                <input
-                    type="text"
-                    id="expense-name"
-                    name="expense-name"
-                    placeholder="e.g. Lunch"
-                >
+            <!-- Header -->
+            <header class="header">
+                <div>
+                    <h2>Dashboard</h2>
+                    <p>Track and manage your spending</p>
+                </div>
 
-                <label for="expense-amount">Amount:</label>
-                <input
-                    type="number"
-                    id="expense-amount"
-                    name="expense-amount"
-                    placeholder="e.g. 500"
-                >
+                <div class="profile">
+                    <span>Welcome, Omari</span>
+                    <div class="avatar">OF</div>
+                </div>
+            </header>
 
-                <label for="expense-category">Category:</label>
-                <select id="expense-category" name="expense-category">
-                    <option value="food">Food</option>
-                    <option value="transport">Transport</option>
-                    <option value="rent">Rent</option>
-                    <option value="entertainment">Entertainment</option>
-                    <option value="other">Other</option>
-                </select>
+            <!-- Summary -->
+            <section class="summary">
+                <div>
+                    <span>Total Budget</span>
+                    <strong>KSh 80,000</strong>
+                </div>
 
-                <label for="expense-date">Date:</label>
-                <input
-                    type="date"
-                    id="expense-date"
-                    name="expense-date"
-                >
+                <div>
+                    <span>Total Spent</span>
+                    <strong>KSh 48,500</strong>
+                </div>
 
-                <button type="button">Add Expense</button>
-            </form>
-        </section>
+                <div>
+                    <span>Remaining</span>
+                    <strong>KSh 31,500</strong>
+                </div>
+            </section>
 
-        <!-- Expenses Section -->
-        <section class="expenses-section">
-            <h2>My Expenses</h2>
+            <!-- Category Cards -->
+            <section class="categories">
+                <h2>Spending Categories</h2>
 
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Amount (Ksh)</th>
-                        <th>Category</th>
-                        <th>Date</th>
-                    </tr>
-                </thead>
+                <div class="card-grid">
 
-                <tbody>
-                    <tr>
-                        <td>Lunch</td>
-                        <td>300</td>
-                        <td>Food</td>
-                        <td>2026-09-01</td>
-                    </tr>
+                    <article class="card" tabindex="0">
+                        <div class="card-header">
+                            <h3>Food</h3>
+                            <span>🍔</span>
+                        </div>
+                        <p>Monthly spending</p>
+                        <strong>KSh 12,500</strong>
+                    </article>
 
-                    <tr>
-                        <td>Bus Fare</td>
-                        <td>150</td>
-                        <td>Transport</td>
-                        <td>2026-09-02</td>
-                    </tr>
+                    <article class="card" tabindex="0">
+                        <div class="card-header">
+                            <h3>Transport</h3>
+                            <span>🚗</span>
+                        </div>
+                        <p>Monthly spending</p>
+                        <strong>KSh 7,800</strong>
+                    </article>
 
-                    <tr>
-                        <td>Electricity</td>
-                        <td>1200</td>
-                        <td>Other</td>
-                        <td>2026-09-03</td>
-                    </tr>
+                    <article class="card" tabindex="0">
+                        <div class="card-header">
+                            <h3>Rent</h3>
+                            <span>🏠</span>
+                        </div>
+                        <p>Monthly spending</p>
+                        <strong>KSh 15,000</strong>
+                    </article>
 
-                    <tr>
-                        <td>Movie</td>
-                        <td>800</td>
-                        <td>Entertainment</td>
-                        <td>2026-09-04</td>
-                    </tr>
+                    <article class="card" tabindex="0">
+                        <div class="card-header">
+                            <h3>Entertainment</h3>
+                            <span>🎬</span>
+                        </div>
+                        <p>Monthly spending</p>
+                        <strong>KSh 4,500</strong>
+                    </article>
 
-                    <tr>
-                        <td>House Rent</td>
-                        <td>15000</td>
-                        <td>Rent</td>
-                        <td>2026-09-05</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+                    <article class="card" tabindex="0">
+                        <div class="card-header">
+                            <h3>Savings</h3>
+                            <span>💰</span>
+                        </div>
+                        <p>Monthly savings</p>
+                        <strong>KSh 5,000</strong>
+                    </article>
 
-        <!-- How to Use -->
-        <section class="instructions">
-            <details>
-                <summary>How to use this tracker</summary>
-                <p>
-                    Enter the expense name, amount, category, and date in the
-                    form above. The Add Expense button is currently for display
-                    only. JavaScript will be added in a future week to make it
-                    functional.
-                </p>
-            </details>
-        </section>
+                    <article class="card" tabindex="0">
+                        <div class="card-header">
+                            <h3>Utilities</h3>
+                            <span>💡</span>
+                        </div>
+                        <p>Monthly spending</p>
+                        <strong>KSh 3,700</strong>
+                    </article>
 
-        <!-- Multimedia Section -->
-        <section class="multimedia">
-            <h2>Budgeting Tips</h2>
+                </div>
+            </section>
 
-            <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/7M9X2j7k8jY"
-                title="Budgeting Tips Video"
-                frameborder="0"
-                allowfullscreen>
-            </iframe>
-        </section>
-
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Personal Budget Tracker</p>
-    </footer>
+        </main>
+    </div>
 
 </body>
 </html>
-```
