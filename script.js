@@ -1,24 +1,58 @@
-// SpendWise - JavaScript Foundation
 
-// 1. Store application data
+const appName = "SpendWise";
+
 let budget = 0;
-let expenses = 0;
-let remainingBalance = 0;
+let expenseName = "";
+let expenseAmount = 0;
 
-// 2. Collect user input
-budget = Number(prompt("Enter your monthly budget:"));
-expenses = Number(prompt("Enter your total expenses:"));
+// Collect information from the user
+function getBudgetInput() {
+    budget = Number(prompt("Enter your total budget in KSh:"));
 
-// 3. Create a reusable function
-function calculateBalance(budget, expenses) {
-    return budget - expenses;
+    expenseName = prompt("Enter your expense name:");
+
+    expenseAmount = Number(
+        prompt("Enter your expense amount in KSh:")
+    );
 }
 
-// 4. Perform the budget calculation
-remainingBalance = calculateBalance(budget, expenses);
+// Calculate the remaining balance
+function calculateRemainingBalance(totalBudget, totalExpense) {
+    return totalBudget - totalExpense;
+}
 
-// 5. Display results in the browser console
-console.log("===== SpendWise Budget Summary =====");
-console.log("Monthly Budget: KSh " + budget);
-console.log("Total Expenses: KSh " + expenses);
-console.log("Remaining Balance: KSh " + remainingBalance);
+// Display the budget report
+function displayResults() {
+    const remainingBalance = calculateRemainingBalance(
+        budget,
+        expenseAmount
+    );
+
+    console.log("===== " + appName + " Budget Report =====");
+    console.log("Total Budget: KSh " + budget);
+    console.log("Expense Name: " + expenseName);
+    console.log("Expense Amount: KSh " + expenseAmount);
+    console.log("Remaining Balance: KSh " + remainingBalance);
+
+    if (remainingBalance < 0) {
+        console.log("Warning: You have exceeded your budget.");
+    } else {
+        console.log("You are within your budget.");
+    }
+}
+
+// Start the application
+getBudgetInput();
+
+if (
+    Number.isFinite(budget) &&
+    Number.isFinite(expenseAmount) &&
+    budget >= 0 &&
+    expenseAmount >= 0 &&
+    expenseName !== null &&
+    expenseName.trim() !== ""
+) {
+    displayResults();
+} else {
+    console.log("Invalid input. Please try again.");
+}
